@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <title>Movie</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
-    <body>
-    <header>
-    
-    </header>
-    <main>
+
+
+    <% include ./partials/header %> 
+    <main class="bg">
+
     <div class="container">
+      <div class="boxScope">
+   
         <div class="row">
-          <h1 class="title">Details here!</h1><br/>
-        </div>      
-        <div class="row">
-          <h3><%= movie.title %><br/></h3>              
-          <p class="plot"><%= movie.plot %><br/></p>
-          <a href="../">Home</a>
+          <div class="col-lg-4 col-s-12">
+            <img class="poster" src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path %>"><br/>
+          </div>
+          <div class="col-lg-8 col-s-12">
+            <h3><%= movie.title %><br/></h3>     
+            <h5><%= movie.vote_average %>/10</h4><br/>     
+            <p class="scope">
+              <strong>Released: </strong><%= movie.release_date %><br/><br/>
+              <strong>Language: </strong><%= movie.original_language.toUpperCase() %><br/><br/>
+              <strong>Overview: </strong><%= movie.overview %><br/><br/>
+            </p>
+            <p class="scope"><a href="../"><-- Back</a></p>
+          </div>
         </div>    
-             
+      </div>
     </main>
   </body>
 </html>

@@ -1,42 +1,33 @@
-<!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <title>Home</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="styles.css" rel="stylesheet" type="text/css" />
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
-    <body>
-    <header>
-    
-    </header>
+<% include ./partials/header %> 
 
-    <main>
-    <div class="container">
-      
-        <div class="row">
+      <main class="bg">
 
-    <h1 class="title">Movie here!</h1><br/>
+        <div class="container">
+
+          <div class="row">
+            
+            <% for (let i = 0; i < movies.length; i++) { %>
+              
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                  <div class="box">
+                    <div class="box1">
+                      <h3 class="movieTitles"><a href="/movie/<%= movies[i].title %>"><%= movies[i].title %></a></h3>
+                    </div>
+                    <div class="box2">
+                      <a href="/movie/<%= movies[i].title %>">
+                      <img src="https://image.tmdb.org/t/p/w500/<%= movies[i].backdrop_path %>" class="boxImg">
+                      </a>
+                    </div>
+                    <div class="box3">
+                      <p class="plot"><%= movies[i].overview %></p><br/>
+                    </div>
+                  </div>   
+                </div>
+            
+            <% }; %> 
+
+          </div>
         </div>
-
-      <div class="row">
-        <form action='/search' method='GET'>
-          <input name='searchTerm' placeholder="Search"/>
-          <button type='submit'>Search</button>
-        </form>
-      </div>
-
-      <% for (let i = 0; i < movies.length; i++) { %>
-        <div class="row">
-        <h3><a href="/movie/<%= movies[i].movieId %>"><%= movies[i].title %><a><br/></h3>        
-                
-        <p class="plot"><%= movies[i].plot %><br/></p>
-        </div>    
-      <% }; %>       
-      
-        
-      
-    </main>
-  </body>
+      </main>
+    </body>
 </html>

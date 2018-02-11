@@ -1,0 +1,115 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #091C24;
+
+body	{ 
+  font: 100% $font-stack;
+  color: 100% $primary-color;
+  background:url("./images/galaxy.jpg") top center no-repeat; 
+  background-attachment:fixed; 
+  background-size: cover;
+  
+}
+
+.title {
+  h1  {
+  color: white;
+  margin-left: 2rem;   
+  }
+}
+
+.movieTitles {
+  a {
+    color: black;
+  }
+}
+
+a:hover {
+    text-decoration: none; 
+}
+
+.searchBox {
+  width: 100%;
+  background-color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-style: none;
+  outline: none;
+}
+
+.input {
+  margin-left: 5rem;
+}
+
+.box {
+  background-color:rgba(255, 255, 255, 0.75);
+  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.75);
+  width: 310px;
+  height: 360px;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding:1rem;
+}
+
+.box1 {
+  position: absolute;
+  top: 0.75rem;
+  height: 33%;
+}
+
+.box2 {
+  position: relative;
+  top:70%; 
+}
+
+.box3 {
+  margin-top: 1rem;
+  position: absolute;
+  height: 98px; 
+  bottom: 0rem;
+  padding-bottom: 5px;
+  overflow: hidden;
+  padding-right: 0.75rem;
+}
+
+.boxScope {
+  background-color:rgba(255, 255, 255, 0.75);
+  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.75);
+  width: 70vw;
+  height: auto;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding:3rem;
+}
+
+.boxImg {
+  position: absolute;
+  bottom:0px;
+  width: 100%; 
+}
+
+.poster {
+  display: inline-block;
+  width: 100%;
+  min-width: 135px;
+  height: auto;
+  padding-right: 0.5rem;
+}
+
+p.plot {
+  font-style: italic;
+  font-size: 8pt;
+  margin-top: 5px;
+  padding-right: 5px;
+  }
+
+
+p.scope {
+  font-style: italic;
+  font-size: 10pt;
+  margin-top: 5px;
+  }
+
+
+
