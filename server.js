@@ -35,7 +35,9 @@ app.get('/search', (req, res, next) => {
       })
     } 
   })
-  res.send('Sorry, don\'t have that movie!')
+  //res.send('Sorry, don\'t have that movie!')
+  res.render('404', {});
+
 })
 
 fs.readFile('avengersMDB.txt', 'utf8', function (err, content) {
@@ -56,7 +58,7 @@ app.use(function (err, req, res, next) {
   if (err.status !== 404) {
     return next();
   }
-  res.send(err.message || '404 page not found');
+  res.render('404', {});
 });
 
 app.listen(port, () => {
